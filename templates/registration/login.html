@@ -1,0 +1,22 @@
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+
+        <form action="{% url 'login' %}" method="POST" class="form_login">
+
+            {% csrf_token %}
+            {{ form.as_p }}
+      
+            <div class="form__field">
+                <input type="submit" value="Sign In">
+            </div>
+      
+        </form>
+
+    </body>
+
+</html>

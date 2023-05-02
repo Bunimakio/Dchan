@@ -1,0 +1,43 @@
+{% load static %}
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}"/>
+</head>
+
+<body style=margin:0;padding:0>
+
+    <nav class="nav_container">
+
+        <button type="button" class="home_button">
+            DChan
+        </button>
+
+        {% if user.is_authenticated %}
+
+            <button type="button" class="welcome_text">
+                ¡Welcome!
+            </button>
+
+            <button type="button" onclick="location.href='accounts/logout/'" class="username_text">
+                {{participant.forum_user}}
+            </button>
+
+            <button type="button" class="user_profile_photo">
+                <img src="{{participant.picture}}" alt="user_picture">
+            </button>
+        
+        {% else %}
+
+            <button type="submit" onclick="location.href='accounts/login/'" class="login_button">
+                <div> Login </div>
+            </button>
+
+        {% endif %}
+
+    </nav>
+
+</body>
+</html>

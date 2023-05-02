@@ -1,0 +1,33 @@
+.nav_container {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+}
+
+.home_button {
+    flex:1;
+    flex-basis: 60%;
+    background-color: green;
+    border:none;
+    color:white;
+    padding:15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+
+}
+
+.welcome_text, .username_text, .user_profile_photo, .login_button {
+
+    flex:2;
+    background-color: green;
+    border: none;
+    color:white;
+    font-size: 16px;
+}
+
+.username_text:hover,.user_profile_photo:hover,.home_button:hover, .login_button:hover{
+    background-color: chartreuse;
+    color:black
+}
